@@ -18,6 +18,8 @@ RUN cd /tmp && gcc script.c && rm script.c && mv /tmp/a.out /home/user/read
 RUN chown flag:flag /home/user/read
 RUN chmod ug+s /home/user/read
 COPY authorized_keys /home/user/.ssh/
+RUN chown -R user:user /home/user/.ssh/
+RUN chmod 644 /home/user/.ssh/authorized_keys
 COPY sshd_config /etc/ssh/
 RUN service ssh start
 EXPOSE 22
