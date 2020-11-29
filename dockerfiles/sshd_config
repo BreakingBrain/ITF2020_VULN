@@ -1,0 +1,16 @@
+Port 22
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTTY yes
+PrintMotd no
+PrintLastLog no
+TCPKeepAlive no
+ClientAliveInterval 60
+MaxStartups 5:10:13
+Match User user

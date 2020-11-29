@@ -1,0 +1,7 @@
+version: '2'
+services:
+    ssh:
+        build: ./dockerfiles
+        ports:
+            - '61322:22'
+        restart: on-failure
